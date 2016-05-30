@@ -1,6 +1,6 @@
 <?php
 
-namespace stivehu\rangecomp;
+namespace stivehu\persisthide;
 
 use Yii;
 use yii\web\AssetBundle;
@@ -13,14 +13,17 @@ use yii\web\AssetBundle;
 class Asserts extends AssetBundle
 {
 
-    public $sourcePath = '@rangecomp/assets';
+    public $sourcePath = '@persisthide/assets';
     public $js = [
-        'rangecomp.js'
+        'persisthide.js'
+    ];
+    public $depend = [
+        'cookie'
     ];
 
     public function init()
     {
-        Yii::setAlias('@rangecomp', __DIR__);
+        Yii::setAlias('@persisthide', __DIR__);
         return parent::init();
     }
 

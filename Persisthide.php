@@ -7,8 +7,15 @@ namespace stivehu\persisthide;
  */
 class Persisthide extends \yii\base\Widget
 {
+    public function init()
+    {
+        Asserts::register($this->getView());
+        return parent::init();
+    }
+
     public function run()
     {
         return "Hello!";
     }
+
 }

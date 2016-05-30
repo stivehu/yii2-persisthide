@@ -17,8 +17,8 @@ class Asserts extends AssetBundle
     public $js = [
         'persisthide.js'
     ];
-    public $depend = [
-        'cookie'
+    public $depends = [
+        'stivehu\enhancedcookie\Asserts'
     ];
 
     public function init()

@@ -28,4 +28,12 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \stivehu\persisthide\AutoloadExample::widget(); ?>```
+<?php     
+   $hidden = stivehu\persisthide\Persisthide::begin();
+    echo $hidden->beginTag();?>
+The hiden text
+<?= $hidden->endTag(); ?>
+<?=  echo $hidden->showButton(Yii::t('app', 'More search'), ['class' => 'btn btn-primary']); ?>
+
+<?php        stivehu\persisthide\Persisthide::end(); ?>
+```
